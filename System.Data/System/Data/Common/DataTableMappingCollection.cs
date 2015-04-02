@@ -380,7 +380,7 @@ namespace System.Data.Common {
                 }
             }
             if (ADP.IsEmpty(sourceTable)) {
-                throw ADP.InvalidSourceTable("sourceTable");
+                //throw ADP.InvalidSourceTable("sourceTable"); // MaKo: do not throw an exception, as this breaks the MySql SimpleMembershipProvider.
             }
             switch (mappingAction) {
                 case MissingMappingAction.Passthrough:
